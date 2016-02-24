@@ -101,6 +101,6 @@ print
 #reactor.listenTCP( 80, server.Site(Root))
 #reactor.listenTCP( 80, server.Site(util.Redirect("https://192.168.0.10")))
 #reactor.listenTCP(443, server.Site(Root), ssl.DefaultOpenSSLContextFactory("server.key", "server.crt"))
-reactor.listenTCP(800, server.Site(Root))
+reactor.listenTCP(80, server.Site(Root), interface='::')
 
 reactor.run()
